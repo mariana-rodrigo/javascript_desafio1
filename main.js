@@ -1,6 +1,28 @@
-let nombre = prompt ("Cuál es mi nombre?");
+let torta;
+let cantidad;
 
-while (nombre != "Mariana"){
-    alert ("Uy! Ingresaste "+nombre+" y es incorrecto, estamos buscando la respuesta Mariana. Tenés otra oportunidad");
-    nombre = prompt ("Ingresá otro nombre ;)");
+function solicitarTortaYCantidad (){
+    torta =  prompt("Cuál de las siguientes tortas quieres ordenar: Lemon Pie - Cabsha - Rogel");
+    cantidad = Number( prompt ("De cuántos kilos es la torta que deseas ordenar?"));
 }
+let precio;
+
+function calcularTotal(cantidad, precio){
+    let total = cantidad * precio;
+    alert ("El total a pagar es "+ total);
+}
+solicitarTortaYCantidad();
+if (torta ==="Lemon Pie"){
+    precio = 300;
+    calcularTotal(cantidad, precio);
+} else if ( torta === "Cabsha"){
+    precio = 200;
+    calcularTotal(cantidad, precio);
+} else if (torta === "Rogel"){
+    precio = 500;
+    calcularTotal(cantidad, precio);
+} else {
+    alert ("Opción incorrecta");
+    solicitarTortaYCantidad();
+}
+
