@@ -1,0 +1,274 @@
+@import "variables";
+body{
+    font-family:"Raleway", sans-serif;
+    padding-left: 20px;
+    padding-right: 20px;
+    
+    #logo{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 10px;   
+    }
+    
+    .barraDeNavegacion{
+        background-image: linear-gradient(to left, $rosa,  $celeste);
+    }
+    
+    .nav-link{
+        color: rgb(249, 250, 252)!important;
+    }
+    
+    a:hover{
+        font-size: larger;
+        color: $violeta !important ;
+    }
+    
+    .elementoListaNav{
+        font-style: oblique;
+        text-decoration: none;
+        font-weight: bolder;
+        font-size: 25px;
+        }
+    /*INICIO*/
+    .elementoAlLado{
+        display: inline;
+    }
+    .portada{
+        width: $ancho-a-full;
+        height: 75%;
+        
+    }
+    .divPortada{
+        display: grid;
+        justify-content: center;
+        margin: 20px 0px;
+    }
+    #videoTexto{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        
+    }
+    .interlineadoDoble{
+        line-height: 200%;
+    }
+    
+    /*PIE*/
+    #pie{
+        display:grid;
+        grid-template-columns: 30fr 2fr;
+    }
+    .footer{
+        border-top: 1px solid   $coral;
+        margin-top: 15px;
+        padding: 10px;
+    }
+    .listaRedes{
+        list-style: none;
+    }
+    .tamañoIconosRedes{
+        height: 40px;
+        width: 40px;
+    }
+    /* PRODUCTOS*/
+
+    .tablaProductos{
+        margin-top: 60px;
+        margin-bottom: 30px;
+        overflow-x: auto;
+        width: $ancho-a-full;
+    }
+    .tamañoLetraXL{
+        font-size: x-large;
+        font-weight: bolder;
+    }
+    .letraEnNegrita{
+        font-weight: bolder;
+    } 
+    .tabla__fondoCeleste{
+        background-color:$celeste;
+    }
+    .textoCentrado{
+        text-align: center;
+    }
+    .tamañoLetraL{
+        font-size: large;
+    }
+    .tabla__fondoRosa{
+        background-color:$rosa;
+    }
+    .tabla__estiloLista{
+        list-style-image: url(https://a.slack-edge.com/production-standard-emoji-assets/13.0/google-medium/1f370.png);
+    }
+    .botonOrdenar{
+        font-weight: bolder;
+    }
+    /* SERVICIOS*/
+    h1{
+        color: $rosa;
+        margin-top: 20px;
+        text-align: center;
+        font-size: xx-large;
+    }
+    h2{
+        font-style:italic;
+        color: $celeste;
+        font-size:30px;
+        font-weight: bold;
+    }
+    .tamañoImagenServicios{
+        width: 90%;
+        height: 25%;
+        margin-bottom: 40px;
+    }
+    .divImagenesServicios{
+        display: flex;
+        justify-content:center;
+    }
+
+    /*GALERIA*/
+    #tablaGaleria{
+        display: grid;
+        grid-template-areas: 
+        "mesaDulce mesaDulce"
+        "mesaDulce1 mesaDulce2"
+        "mesaDulce3 mesaDulce4"
+        "mesaDulce5 mesaDulce6"
+        "tortas tortas"
+        "torta1 torta2"
+        "torta3 torta4"
+        "torta5 torta6";
+        grid-template-columns: 50% 50%;
+        grid-row-gap: 10px;
+        
+
+    }
+    #mesaDulce{
+        grid-area: mesaDulce;
+    }
+    #mesaDulce1{
+        grid-area: mesaDulce1;
+        
+    }
+    #mesaDulce2{
+        grid-area: mesaDulce2;
+    }
+    #mesaDulce3{
+        grid-area: mesaDulce3;
+        
+    }
+    #mesaDulce4{
+        grid-area: mesaDulce4;
+    }
+    #mesaDulce5{
+        grid-area: mesaDulce5;
+    }
+    #mesaDulce6{
+        grid-area: mesaDulce6;
+    }
+    #tortas{
+        grid-area: tortas;
+        
+    }
+    #torta1{
+        grid-area: torta1;
+    }
+    #torta2{
+        grid-area: torta2;
+    }
+    #torta3{
+        grid-area: torta3;
+    }
+    #torta4{
+        grid-area: torta4;
+    }
+    #torta5{
+        grid-area: torta5;
+    }
+    #torta6{
+        grid-area: torta6;
+    }
+    .tamañoImagenGaleria{
+        width: 600px;
+        height: 400px;
+    }
+    #tablaGaleria img:hover{
+        width: $ancho-a-full;
+        height: auto;
+        transition: 500ms linear;
+    }
+
+    /*CONTACTO*/
+    .contacto{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .tituloContacto{
+        width: $ancho-a-full;
+    }
+    .form{
+        border: 2px solid $coral;
+        padding: 10px;
+        width: 60%;
+    }
+    .ingresarTexto{
+        width: $ancho-a-full;
+    }
+    .divEspaciado{
+        margin-top: 20px;
+        padding: 10px;
+    }
+    #mensaje{
+        width: $ancho-a-full;
+    }
+    input:focus{
+        width: 200px;
+        height: 50px;
+    }
+    /*RESPONSIVE*/
+    @media only screen and (max-width:530px){
+        .listaNav{
+            display:block;
+            list-style: none;
+            font:0;
+        }
+        .elementoListaNav{
+            position: relative;
+            font-size: 25px;
+            width: 15%;
+        }
+        .listaSubmenu{
+            position:relative;
+            display: none;
+        }
+        .elementoSubmenu{
+            display: block;
+        }
+        ul li:hover ul{
+            display: block;
+        }
+        #videoTexto{
+            display: block;
+        }
+        #tamañovideo{
+            width: $ancho-a-full;
+            height: 100%;
+        }
+        .form{
+            width: 100%;
+        }
+    }
+    @media only screen and (max-width:1300px){
+        #tablaGaleria{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        .tamañoImagenGaleria{
+            width: $ancho-a-full;
+            height: 100%;
+        }
+
+    }
+}

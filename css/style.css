@@ -1,0 +1,184 @@
+@charset "UTF-8";
+body {
+  font-family: "Raleway", sans-serif;
+  padding-left: 20px;
+  padding-right: 20px;
+  /*INICIO*/
+  /*PIE*/
+  /* PRODUCTOS*/
+  /* SERVICIOS*/
+  /*GALERIA*/
+  /*CONTACTO*/
+  /*RESPONSIVE*/ }
+  body #logo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px; }
+  body .barraDeNavegacion {
+    background-image: linear-gradient(to left, #de2c62, #1dedfd); }
+  body .nav-link {
+    color: #f9fafc !important; }
+  body a:hover {
+    font-size: larger;
+    color: blueviolet !important; }
+  body .elementoListaNav {
+    font-style: oblique;
+    text-decoration: none;
+    font-weight: bolder;
+    font-size: 25px; }
+  body .elementoAlLado {
+    display: inline; }
+  body .portada {
+    width: 100%;
+    height: 75%; }
+  body .divPortada {
+    display: grid;
+    justify-content: center;
+    margin: 20px 0px; }
+  body #videoTexto {
+    display: grid;
+    grid-template-columns: 1fr 1fr; }
+  body .interlineadoDoble {
+    line-height: 200%; }
+  body #pie {
+    display: grid;
+    grid-template-columns: 30fr 2fr; }
+  body .footer {
+    border-top: 1px solid crimson;
+    margin-top: 15px;
+    padding: 10px; }
+  body .listaRedes {
+    list-style: none; }
+  body .tamañoIconosRedes {
+    height: 40px;
+    width: 40px; }
+  body .tablaProductos {
+    margin-top: 60px;
+    margin-bottom: 30px;
+    overflow-x: auto;
+    width: 100%; }
+  body .tamañoLetraXL {
+    font-size: x-large;
+    font-weight: bolder; }
+  body .letraEnNegrita {
+    font-weight: bolder; }
+  body .tabla__fondoCeleste {
+    background-color: #1dedfd; }
+  body .textoCentrado {
+    text-align: center; }
+  body .tamañoLetraL {
+    font-size: large; }
+  body .tabla__fondoRosa {
+    background-color: #de2c62; }
+  body .tabla__estiloLista {
+    list-style-image: url(https://a.slack-edge.com/production-standard-emoji-assets/13.0/google-medium/1f370.png); }
+  body .botonOrdenar {
+    font-weight: bolder; }
+  body h1 {
+    color: #de2c62;
+    margin-top: 20px;
+    text-align: center;
+    font-size: xx-large; }
+  body h2 {
+    font-style: italic;
+    color: #1dedfd;
+    font-size: 30px;
+    font-weight: bold; }
+  body .tamañoImagenServicios {
+    width: 90%;
+    height: 25%;
+    margin-bottom: 40px; }
+  body .divImagenesServicios {
+    display: flex;
+    justify-content: center; }
+  body #tablaGaleria {
+    display: grid;
+    grid-template-areas: "mesaDulce mesaDulce" "mesaDulce1 mesaDulce2" "mesaDulce3 mesaDulce4" "mesaDulce5 mesaDulce6" "tortas tortas" "torta1 torta2" "torta3 torta4" "torta5 torta6";
+    grid-template-columns: 50% 50%;
+    grid-row-gap: 10px; }
+  body #mesaDulce {
+    grid-area: mesaDulce; }
+  body #mesaDulce1 {
+    grid-area: mesaDulce1; }
+  body #mesaDulce2 {
+    grid-area: mesaDulce2; }
+  body #mesaDulce3 {
+    grid-area: mesaDulce3; }
+  body #mesaDulce4 {
+    grid-area: mesaDulce4; }
+  body #mesaDulce5 {
+    grid-area: mesaDulce5; }
+  body #mesaDulce6 {
+    grid-area: mesaDulce6; }
+  body #tortas {
+    grid-area: tortas; }
+  body #torta1 {
+    grid-area: torta1; }
+  body #torta2 {
+    grid-area: torta2; }
+  body #torta3 {
+    grid-area: torta3; }
+  body #torta4 {
+    grid-area: torta4; }
+  body #torta5 {
+    grid-area: torta5; }
+  body #torta6 {
+    grid-area: torta6; }
+  body .tamañoImagenGaleria {
+    width: 600px;
+    height: 400px; }
+  body #tablaGaleria img:hover {
+    width: 100%;
+    height: auto;
+    transition: 500ms linear; }
+  body .contacto {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; }
+  body .tituloContacto {
+    width: 100%; }
+  body .form {
+    border: 2px solid crimson;
+    padding: 10px;
+    width: 60%; }
+  body .ingresarTexto {
+    width: 100%; }
+  body .divEspaciado {
+    margin-top: 20px;
+    padding: 10px; }
+  body #mensaje {
+    width: 100%; }
+  body input:focus {
+    width: 200px;
+    height: 50px; }
+  @media only screen and (max-width: 530px) {
+    body .listaNav {
+      display: block;
+      list-style: none;
+      font: 0; }
+    body .elementoListaNav {
+      position: relative;
+      font-size: 25px;
+      width: 15%; }
+    body .listaSubmenu {
+      position: relative;
+      display: none; }
+    body .elementoSubmenu {
+      display: block; }
+    body ul li:hover ul {
+      display: block; }
+    body #videoTexto {
+      display: block; }
+    body #tamañovideo {
+      width: 100%;
+      height: 100%; }
+    body .form {
+      width: 100%; } }
+  @media only screen and (max-width: 1300px) {
+    body #tablaGaleria {
+      display: flex;
+      flex-direction: column;
+      justify-content: center; }
+    body .tamañoImagenGaleria {
+      width: 100%;
+      height: 100%; } }

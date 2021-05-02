@@ -1,0 +1,3 @@
+Este es mi proyecto final del curso de Desarrollo Web de Coderhouse camada 13640, docente Bernal Pastor, Tutora Milena Monzón.
+Empecé a cursar sin tener ningún tipo de conocimiento de HTML ni CSS. Siento que aprendí muchísimo y al mismo tiempo que todavía me falta mucho más.
+Quería aprovechar para agradecerle a Bernal por las clases que sirvieron muchísimo, siempre con paciencia y de buen humor. A los tutores por los After que fueron de inmensa ayuda y a mi tutora Milena por estar siempre atenta a todas mis dudas. 
