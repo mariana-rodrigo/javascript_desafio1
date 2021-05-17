@@ -15,6 +15,8 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
             integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
         <link rel="stylesheet" href="css/style.css">
+        <script src="contacto.js" defer></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         
     
     </head>
@@ -77,15 +79,15 @@
             <form class="letraEnNegrita">
                 <div class="divEspaciado">
                     <label for="nombre"> Nombre:</label>
-                    <input class="ingresarTexto" type="text" name="nombre" >
+                    <input class="ingresarTexto nombre" type="text" name="nombre" >
                 </div>
                 <div class="divEspaciado">
                     <label for="apellido">Apellido:</label>
-                    <input class="ingresarTexto" type="text" name="apellido">
+                    <input class="ingresarTexto apellido" type="text" name="apellido">
                 </div>
                 <div class="divEspaciado"> 
                     <label for="mail">Mail:</label>
-                    <input class="ingresarTexto" type="email" name="mail" id="mail">
+                    <input class="ingresarTexto mail" type="email" name="mail" id="mail">
                 </div>
                 <div class="divEspaciado">
                     <label for="referido"> Cómo nos conociste?</label>
@@ -99,23 +101,22 @@
                 <h2>¿Qué servicio te interesa?</h2>
                 <div>
                     <label for="Torta">Encargar una Torta</label>
-                    <input type="checkbox" name="Torta" id="Torta">
+                    <input class= "checkbox1" type="checkbox" name="Torta" id="Torta">
                 </div>
                 <div>
                     <label for="adulto"> Mesa dulce para adultos</label>
-                    <input type="checkbox" name="adulto" id="adulto">
+                    <input class= "checkbox2" type="checkbox" name="adulto" id="adulto">
                 </div>
                 <div>
                     <label for="infantil"> Mesa dulce para niños</label>
-                    <input type="checkbox" name="infantil" id="infantil">
+                    <input class= "checkbox3" type="checkbox" name="infantil" id="infantil">
                 </div>
-                <label for="curso"> Cursos disponibles</label>
-                <input type="checkbox" name="curso" id="curso">
+                
                 <h2 class="divEspaciado"><label for="mensaje">Escríbenos tu consulta</label></h2>
                 <textarea name="mensaje" id="mensaje" rows="20"></textarea>
                 <div class="divEspaciado">
-                    <input type="submit" value="Enviar formulario">
-                    <input type="reset" value="Limpiar Formulario">
+                    <button>Enviar Información</button>
+                    
                 </div>
             </form>
         </div>
