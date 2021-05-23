@@ -9,6 +9,11 @@ body{
         justify-content: center;
         margin-bottom: 10px;   
     }
+    .carrito{
+        width: 10%;
+        height: 10%;
+        align-items: flex-end
+    }
     
     .barraDeNavegacion{
         background-image: linear-gradient(to left, $rosa,  $celeste);
@@ -70,7 +75,29 @@ body{
         width: 40px;
     }
     /* PRODUCTOS*/
+    .divProductos{
+        border: 2px solid $coral;
+        height: 25%;
+        width: 40%;
+        margin-top: 50px;
+        padding: 10px;
+        justify-content: center;
+        align-items: center;
 
+    }
+
+    .botonCarrito{
+        height: 100px;
+        width: 100px;
+        padding: 0;
+    }
+    .carrito{
+        height: 100px;
+        width: 100px;
+        padding: 0;
+        margin: 0;
+    }
+    
     .tablaProductos{
         margin-top: 60px;
         margin-bottom: 30px;

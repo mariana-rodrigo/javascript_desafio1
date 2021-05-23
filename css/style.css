@@ -14,6 +14,10 @@ body {
     display: flex;
     justify-content: center;
     margin-bottom: 10px; }
+  body .carrito {
+    width: 10%;
+    height: 10%;
+    align-items: flex-end; }
   body .barraDeNavegacion {
     background-image: linear-gradient(to left, #de2c62, #1dedfd); }
   body .nav-link {
@@ -52,6 +56,23 @@ body {
   body .tamañoIconosRedes {
     height: 40px;
     width: 40px; }
+  body .divProductos {
+    border: 2px solid crimson;
+    height: 25%;
+    width: 40%;
+    margin-top: 50px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center; }
+  body .botonCarrito {
+    height: 100px;
+    width: 100px;
+    padding: 0; }
+  body .carrito {
+    height: 100px;
+    width: 100px;
+    padding: 0;
+    margin: 0; }
   body .tablaProductos {
     margin-top: 60px;
     margin-bottom: 30px;
