@@ -77,19 +77,34 @@ body{
     /* PRODUCTOS*/
     .divProductos{
         border: 2px solid $coral;
-        height: 25%;
-        width: 40%;
+        width: 48%;
         margin-top: 50px;
+        margin-left: 20px;
         padding: 10px;
         justify-content: center;
         align-items: center;
 
     }
-
+    .mainProductos{
+        display: flex;
+        flex-wrap: wrap;
+        
+    }
     .botonCarrito{
+        border: 0;
         height: 100px;
         width: 100px;
         padding: 0;
+        position: fixed;
+        bottom: 40px;
+        right: 40px;
+        transition: all 300ms ease 0ms;
+        
+        z-index: 99;
+    }
+    .botonCarrito:hover{
+        
+	    transform: translateY(-7px);
     }
     .carrito{
         height: 100px;
@@ -283,6 +298,10 @@ body{
         }
         .form{
             width: 100%;
+        }
+        .divProductos{
+            width: 100%;
+            height: 100%;
         }
     }
     @media only screen and (max-width:1300px){

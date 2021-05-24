@@ -58,16 +58,27 @@ body {
     width: 40px; }
   body .divProductos {
     border: 2px solid crimson;
-    height: 25%;
-    width: 40%;
+    width: 48%;
     margin-top: 50px;
+    margin-left: 20px;
     padding: 10px;
     justify-content: center;
     align-items: center; }
+  body .mainProductos {
+    display: flex;
+    flex-wrap: wrap; }
   body .botonCarrito {
+    border: 0;
     height: 100px;
     width: 100px;
-    padding: 0; }
+    padding: 0;
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    transition: all 300ms ease 0ms;
+    z-index: 99; }
+  body .botonCarrito:hover {
+    transform: translateY(-7px); }
   body .carrito {
     height: 100px;
     width: 100px;
@@ -194,7 +205,10 @@ body {
       width: 100%;
       height: 100%; }
     body .form {
-      width: 100%; } }
+      width: 100%; }
+    body .divProductos {
+      width: 100%;
+      height: 100%; } }
   @media only screen and (max-width: 1300px) {
     body #tablaGaleria {
       display: flex;

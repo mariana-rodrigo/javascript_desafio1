@@ -29,33 +29,48 @@ function finalizarCompra(productosElegidos){
 }
 function loQueSeHaceAlCargarLaPagina() {
 
+    
+
     const bomba = new Torta ("Torta Bomba", "Bizcochuelo húmedo de chocolate. Merengue Italiano. Mouse de choclate", 1700, "imagenes/Bomba.jpg" );
-    const paraiso = new Torta ("Torta paraíso", "Bizcohuelo de vainilla. Relleno ganache de chcolate con leche. recubierto con crocante de avellanas y maní", 1900, "imagenes/Paraiso.jpg");
+    const paraiso = new Torta ("Torta Paraíso", "Bizcohuelo de vainilla. Relleno ganache de chcolate con leche. recubierto con crocante de avellanas y maní", 1900, "imagenes/Paraiso.jpg");
+    const infierno = new Torta ("Torta Infierno", "Bizcochuelo Red Velvet. Crema de Maracuyá y cardamomo. Ganache de chocolate blanco", 1600, "imagenes/Infierno.jpeg");
+    const limaLimon = new Torta ("Torta Lima Limón", "Bizcochuelo de vainilla. Relleno Ganache de limón con crocantes de pistacho. Recubierto con merengue italiano con lima", 1500, "imagenes/LimaLimon.jpg");
+    const dartagnan = new Torta ("Torta D'Artagnan", "Bizcochuelo de Naranja. Crema de Pistacho y Nutella. Ganache de chocolate blanco", 1800, "imagenes/Dartagnan.png");
+    const cale = new Torta ("Torta Cale", "Bizcochuelo marmolado de café. Relleno crema rusa. Recubierto con chocolate amargo y crocantes de maní", 1500, "imagenes/Cale.jpg")
+
     const productos = [];
     productos.push(bomba);
     productos.push(paraiso);
+    productos.push(infierno);
+    productos.push(limaLimon);
+    productos.push(dartagnan);
+    productos.push(cale);
     
     for (let i=0; i<productos.length; i++){
         let card = document.createElement("div");
 
         card.innerHTML =`
-        <img src="${productos[i].imagen}"/ width=100% height= 25%>            
+        <img src="${productos[i].imagen}"/ class="tamañoImagenGaleria">            
         <h1> Nombre: ${productos[i].nombre}</h1>
         <h2> Descripción: ${productos[i].descripcion} </h2>
         <h3>Precio: $${productos[i].precio}</h3>
-        <button class="botonParaAgregarProducto">Agregar</button>`;
+        <button class="botonParaAgregarProducto">Agregar</button>`
+        
 
         const main = document.getElementsByTagName("main")[0];
         main.appendChild(card);
         card.setAttribute("class","divProductos");
         card.setAttribute("data-nombre", productos[i].nombre);
-        card.setAttribute("data-precio", productos[i].precio)
+        card.setAttribute("data-precio", productos[i].precio);
+        
 
     }
 
     const losBotonesDeAgregarProducto = document.getElementsByClassName("botonParaAgregarProducto");
 
     const productosElegidos = [];
+
+    
 
     for (let i=0; i<losBotonesDeAgregarProducto.length; i++){
         losBotonesDeAgregarProducto[i].addEventListener('click', function (evento) {
@@ -65,6 +80,9 @@ function loQueSeHaceAlCargarLaPagina() {
             agregadoExitosamente.innerHTML= `<span">Agregado exitosamente!</span>`;
             agregadoExitosamente.classList.add('animate__animated', 'animate__fadeOutUp')
             elBotonClickeado.parentElement.appendChild(agregadoExitosamente);
+            setTimeout(function(){
+                elBotonClickeado.parentElement.removeChild(agregadoExitosamente);;
+            },300) 
         });
     }
     
@@ -88,56 +106,3 @@ loQueSeHaceAlCargarLaPagina();
 
 
 
-/* function ItemCarrito(nombre, precioPorKilo, precioTotalporTorta){
-    this.nombre = nombre;
-    this.precioPorKilo = precioPorKilo;
-    this.precioTotalporTorta = precioTotalporTorta;
-}
-
-function ordenarTorta(nroDeTorta, botonOrdenar) {
-    const inputParaIngresarLaCantidad = document.createElement('input');
-    inputParaIngresarLaCantidad.setAttribute("type", "number");
-    inputParaIngresarLaCantidad.setAttribute("class", "inputCantidad");
-    botonOrdenar.parentElement.appendChild(inputParaIngresarLaCantidad);
-}
-
-function finalizarCompra(){ 
-    const filasDeLaTabla = document.getElementsByTagName ('tr');
-    const filasDeLaTablaArray = Array.from(filasDeLaTabla);
-    filasDeLaTablaArray.shift();
-    const carrito = [];
-    for(let i=0; i<filasDeLaTablaArray.length;i++){
-        const nombreTorta=document.getElementsByClassName ("nombreTorta");
-        const nombreTortaElegida = nombreTorta[i].innerHTML;
-        const precioTorta=document.getElementsByClassName ("precioTorta");
-        const precioTortaElegida = precioTorta[i].innerHTML.substring(1);
-        const cantidadElegida = document.getElementsByClassName("inputCantidad");
-        const cantidadElegidaDeTorta = Number(cantidadElegida[i].value);
-        const precioTotalPorTorta = cantidadElegidaDeTorta * Number(precioTortaElegida);
-        const elItemQueEstoyAgregando = new ItemCarrito (nombreTortaElegida, precioTortaElegida, precioTotalPorTorta);
-        carrito.push(elItemQueEstoyAgregando);
-    }
-    console.log(carrito);
-    const carritoEnJSON = JSON.stringify(carrito);
-    localStorage.setItem("carrito", carritoEnJSON);
-    window.location.href="carrito.html";
-}
-
-function alCargarLaPagina() {
-    
-
-    const losBotonesOrdenar = document.getElementsByClassName("botonOrdenar");
-    
-    for (let i=0; i<losBotonesOrdenar.length; i++){
-        losBotonesOrdenar[i].addEventListener('click', function (evento) {
-            const elBotonClickeado = evento.target;
-            ordenarTorta(i, elBotonClickeado);
-        })
-    }
-
-    document.getElementById("botonFinalizarCompra").addEventListener('click', finalizarCompra)
-}
-
-
-
-alCargarLaPagina(); */
