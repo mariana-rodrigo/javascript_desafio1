@@ -70,7 +70,14 @@ function loQueSeHaceAlCargarLaPagina() {
 
     const productosElegidos = [];
 
-    
+    const botonFinalizarCompra = document.getElementById('botonFinalizarCompra');
+    botonFinalizarCompra.addEventListener('click', function (evento) {
+        finalizarCompra(productosElegidos);
+    });
+
+    let contadorDeProductos = document.createElement('p');
+    botonFinalizarCompra.appendChild(contadorDeProductos);
+    contadorDeProductos.setAttribute("class", "contador")
 
     for (let i=0; i<losBotonesDeAgregarProducto.length; i++){
         losBotonesDeAgregarProducto[i].addEventListener('click', function (evento) {
@@ -83,18 +90,12 @@ function loQueSeHaceAlCargarLaPagina() {
             setTimeout(function(){
                 elBotonClickeado.parentElement.removeChild(agregadoExitosamente);;
             },300) 
+            
+            contadorDeProductos.innerHTML = productosElegidos.length;
+            
+            console.log(contadorDeProductos)
         });
     }
-    
-    
-    
-    const botonFinalizarCompra = document.getElementById('botonFinalizarCompra');
-    botonFinalizarCompra.addEventListener('click', function (evento) {
-        finalizarCompra(productosElegidos);
-    });
-
-
-    
 }
 
 
