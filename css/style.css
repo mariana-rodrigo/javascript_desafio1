@@ -134,7 +134,8 @@ body {
     display: grid;
     grid-template-areas: "mesaDulce mesaDulce" "mesaDulce1 mesaDulce2" "mesaDulce3 mesaDulce4" "mesaDulce5 mesaDulce6" "tortas tortas" "torta1 torta2" "torta3 torta4" "torta5 torta6";
     grid-template-columns: 50% 50%;
-    grid-row-gap: 10px; }
+    grid-row-gap: 10px;
+    grid-column-gap: 20px; }
   body #mesaDulce {
     grid-area: mesaDulce; }
   body #mesaDulce1 {
@@ -164,7 +165,7 @@ body {
   body #torta6 {
     grid-area: torta6; }
   body .tamañoImagenGaleria {
-    width: 600px;
+    width: 100%;
     height: 400px; }
   body #tablaGaleria img:hover {
     width: 100%;
